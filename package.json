@@ -1,7 +1,7 @@
 {
   "name": "react-native-screen-orientation-listener",
-  "version": "1.0.0",
-  "description": "Detect screen orientation changes in React Native. ",
+  "version": "1.0.1",
+  "description": "Detect screen orientation changes in React Native.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --skipLibCheck"
