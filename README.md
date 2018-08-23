@@ -9,12 +9,17 @@ or
 ``npm install react-native-screen-orientation-listener --save``
 
 ## Usage 
+```
 import { ScreenOrientation } from 'react-native-screen-orientation-listener';
 
-```
 <ScreenOrientation onChange={onChange}>
     {/* Your app root */}
 </ScreenOrientation>
 
 const onChange = orientation => console.log("New screen orientation: " orientation)
 ```
+
+## Additional functions
+
+```import { isPortrait, isLandscape, getScreenOrientation } from 'react-native-screen-orientation-listener';```
+
