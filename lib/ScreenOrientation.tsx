@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, StyleSheet, View } from 'react-native';
+import { Dimensions, StyleSheet, View, ViewProperties } from 'react-native';
 
 export enum Orientation {
   PORTRAIT = 'PORTRAIT',
@@ -8,7 +8,7 @@ export enum Orientation {
 
 type Props = {
   onChange: (orientation: Orientation) => void,
-}
+} & ViewProperties
 
 type State = {
   orientation: Orientation,
@@ -24,9 +24,11 @@ export class ScreenOrientation extends Component<Props, State> {
 
   render() {
     return (
-      <View onLayout={this.onLayout} style={styles.container}>
-        {this.props.children}
-      </View>
+      <View
+        {...this.props}
+        onLayout={this.onLayout}
+        style={[styles.container, this.props.style]}
+        pointerEvents={'box-none'} />
     );
   }
 
