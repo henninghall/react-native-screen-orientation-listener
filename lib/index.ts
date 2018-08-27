@@ -1,7 +1,8 @@
 export {
     ScreenOrientation,
+    Orientation,
+    getScreenOrientation,
     isPortrait,
     isLandscape,
-    getScreenOrientation,
-    Orientation,
+    getOrientation,
 } from "./ScreenOrientation";
